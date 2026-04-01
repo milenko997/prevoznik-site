@@ -99,3 +99,37 @@
     font-size: 0.95rem;
     line-height: 1.7;
 }
+
+.serviceCardSpecial {
+    background: linear-gradient(
+        135deg,
+        $color-accent-dark 0%,
+        $color-accent 100%
+    );
+    border-color: $color-accent-light;
+
+    .serviceTitle {
+        color: $color-dark;
+    }
+
+    .serviceDesc {
+        color: rgba(0, 0, 0, 0.7);
+    }
+
+    &:hover {
+        transform: translateY(-10px) scale(1.02);
+        box-shadow: 0 15px 40px rgba($color-accent, 0.3);
+
+        .serviceIconSpecial {
+            background-color: $color-white;
+        }
+    }
+}
+
+.serviceIconSpecial {
+    background-color: rgba(0, 0, 0, 0.2);
+
+    svg {
+        color: $color-dark;
+    }
+}
