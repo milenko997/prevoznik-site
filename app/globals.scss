@@ -44,3 +44,36 @@ ul {
   margin: 0 auto;
   padding: 0 20px;
 }
+
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-header-light .section-title {
+    color: $color-white;
+}
+
+.section-header-light .section-subtitle {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.section-title {
+    font-size: clamp(2rem, 5vw, 2.8rem);
+    font-weight: 700;
+    color: $color-text-dark;
+    margin-bottom: 15px;
+}
+
+.section-line {
+    width: 60px;
+    height: 4px;
+    background-color: $color-accent;
+    margin: 0 auto 20px;
+    border-radius: 2px;
+}
+
+.section-subtitle {
+    font-size: 1.1rem;
+    color: $color-text-muted;
+}
