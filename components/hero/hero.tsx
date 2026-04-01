@@ -1,0 +1,33 @@
+import Link from 'next/link';
+import styles from './hero.module.scss';
+
+const Hero = () => {
+    return (
+        <section className={styles.hero} id="hero">
+            <div className={styles.heroOverlay} />
+
+            <div className={styles.heroContent}>
+                <h1 className={styles.heroTitle}>PREVOZNIK</h1>
+
+                <p className={styles.heroTagline}>
+                    Pouzdane usluge prevoza i iskopavanja
+                </p>
+
+                <p className={styles.heroSubtitle}>
+                    Kamion 5t | Bager 4t | Odvoz šuta
+                </p>
+
+                <Link href="#contact" className={styles.heroBtn}>
+                    Pozovite nas
+                </Link>
+            </div>
+
+            <div className={styles.heroScroll}>
+                <span>Saznajte više</span>
+                <div className={styles.scrollArrow} />
+            </div>
+        </section>
+    );
+};
+
+export default Hero;

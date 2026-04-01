@@ -1,0 +1,108 @@
+@use "@/styles/variables" as *;
+@use "@/styles/mixins" as *;
+
+.hero {
+    position: relative;
+    height: 100vh;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    background: url("https://images.unsplash.com/photo-1737535228679-71c84fa778d3?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMjd8MHwxfHNlYXJjaHwyfHxjb25zdHJ1Y3Rpb24lMjBleGNhdmF0b3IlMjB0cnVja3xlbnwwfHx8fDE3NzQwOTIxODB8MA&ixlib=rb-4.1.0&q=85")
+        center / cover no-repeat;
+}
+
+.heroOverlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(26, 26, 26, 0.7) 0%,
+        rgba(26, 26, 26, 0.85) 100%
+    );
+}
+
+.heroContent {
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+}
+
+.heroTitle {
+    font-size: clamp(2rem, 6vw, 3.5rem);
+    font-weight: 700;
+    color: $color-white;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.heroTagline {
+    font-size: clamp(1.2rem, 3vw, 1.8rem);
+    color: $color-accent;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.heroSubtitle {
+    font-size: 1.1rem;
+    color: $color-white;
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+}
+
+.heroBtn {
+    display: inline-block;
+    padding: 15px 40px;
+    background-color: $color-accent;
+    color: $color-dark;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 50px;
+    box-shadow: $shadow-md;
+    transition: $transition;
+
+    &:hover {
+        background-color: $color-accent-light;
+        transform: translateY(-3px);
+        box-shadow: $shadow-lg;
+    }
+}
+
+.heroScroll {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: $color-white;
+    font-size: 0.9rem;
+    text-align: center;
+    animation: bounce 2s infinite;
+}
+
+.scrollArrow {
+    width: 20px;
+    height: 20px;
+    margin: 10px auto 0;
+    border-right: 2px solid $color-accent;
+    border-bottom: 2px solid $color-accent;
+    transform: rotate(45deg);
+}
+
+@keyframes bounce {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    40% {
+        transform: translateX(-50%) translateY(-10px);
+    }
+    60% {
+        transform: translateX(-50%) translateY(-5px);
+    }
+}
