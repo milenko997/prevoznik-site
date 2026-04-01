@@ -1,0 +1,98 @@
+@use "@/styles/variables" as *;
+@use "@/styles/mixins" as *;
+
+.contact {
+    padding: 100px 0;
+    background: linear-gradient(135deg, $color-dark 0%, $color-dark-light 100%);
+}
+
+.contactContent {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.contactItem {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.contactIcon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba($color-accent, 0.1);
+    border-radius: 50%;
+    flex-shrink: 0;
+
+    svg {
+        width: 28px;
+        height: 28px;
+        color: $color-accent;
+    }
+}
+
+.contactLabel {
+    display: block;
+    font-size: clamp(0.85rem, 0.8vw + 0.6rem, 0.9rem);
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 5px;
+}
+
+.contactValue {
+    display: block;
+    font-size: clamp(1rem, 1vw + 0.8rem, 1.1rem);
+    color: $color-white;
+    font-weight: 500;
+}
+
+.phoneLink {
+    color: $color-accent;
+    font-size: clamp(1.1rem, 1vw + 0.9rem, 1.3rem);
+
+    &:hover {
+        color: $color-accent-light;
+    }
+}
+
+.contactCta {
+    text-align: center;
+    padding: 50px;
+    background-color: $color-dark-medium;
+    border-radius: $border-radius;
+}
+
+.ctaText {
+    font-size: clamp(1.1rem, 1vw + 0.9rem, 1.3rem);
+    color: $color-white;
+    margin-bottom: 25px;
+}
+
+.ctaButton {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 40px;
+    background-color: $color-accent;
+    color: $color-dark;
+    font-size: clamp(1rem, 1vw + 0.9rem, 1.2rem);
+    font-weight: 600;
+    border-radius: 50px;
+    transition: $transition;
+
+    svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    &:hover {
+        background-color: $color-accent-light;
+        transform: scale(1.05);
+        box-shadow: 0 5px 20px rgba($color-accent, 0.3);
+    }
+}
