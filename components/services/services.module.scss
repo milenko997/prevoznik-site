@@ -1,0 +1,101 @@
+@use "@/styles/variables" as *;
+@use "@/styles/mixins" as *;
+
+.services {
+    padding: 100px 0;
+    background-color: $color-dark;
+}
+
+.sectionHeader {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.sectionHeaderLight {
+    .sectionTitle {
+        color: $color-white;
+    }
+
+    .sectionSubtitle {
+        color: rgba(255, 255, 255, 0.7);
+    }
+}
+
+.sectionTitle {
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    font-weight: 700;
+    color: $color-dark;
+}
+
+.sectionLine {
+    width: 60px;
+    height: 3px;
+    background-color: $color-accent;
+    margin: 15px auto 15px;
+}
+
+.sectionSubtitle {
+    font-size: clamp(0.95rem, 1.2vw, 1.1rem);
+    color: $color-text-muted;
+}
+
+.servicesGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.serviceCard {
+    background-color: $color-dark-light;
+    padding: 40px 30px;
+    border-radius: $border-radius;
+    text-align: center;
+    transition: $transition;
+    border: 1px solid $color-dark-medium;
+
+    &:hover {
+        transform: translateY(-10px);
+        border-color: $color-accent;
+        box-shadow: 0 10px 30px rgba($color-accent, 0.1);
+
+        .serviceIcon {
+            background-color: $color-accent;
+
+            svg {
+                color: $color-dark;
+            }
+        }
+    }
+}
+
+.serviceIcon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba($color-accent, 0.1);
+    border-radius: 50%;
+    transition: $transition;
+
+    svg {
+        width: 35px;
+        height: 35px;
+        color: $color-accent;
+        transition: $transition;
+    }
+}
+
+.serviceTitle {
+    font-size: clamp(1.1rem, 1.5vw, 1.3rem);
+    font-weight: 600;
+    color: $color-white;
+    margin-bottom: 15px;
+}
+
+.serviceDesc {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
