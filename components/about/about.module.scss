@@ -1,0 +1,90 @@
+@use "@/styles/variables" as *;
+@use "@/styles/mixins" as *;
+
+.about {
+    padding: 100px 0;
+    background-color: $color-white;
+}
+
+.sectionHeader {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.sectionTitle {
+    font-size: clamp(2rem, 5vw, 2.8rem);
+    font-weight: 700;
+    color: $color-dark;
+}
+
+.sectionLine {
+    width: 60px;
+    height: 3px;
+    background-color: $color-accent;
+    margin: 15px auto 0;
+}
+
+.aboutContent {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.aboutText {
+    p {
+        margin-bottom: 20px;
+        color: $color-text-muted;
+        font-size: 1.05rem;
+    }
+}
+
+.aboutText .aboutLead {
+    font-size: 1.2rem;
+    color: $color-text-dark;
+    font-weight: 500;
+}
+
+.aboutStats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.statItem {
+    text-align: center;
+    padding: 30px 20px;
+    background-color: $color-light;
+    border-radius: $border-radius;
+    transition: $transition;
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: $shadow-md;
+    }
+}
+
+.statIcon {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+
+    svg {
+        width: 40px;
+        height: 40px;
+        color: $color-accent;
+    }
+}
+
+.statNumber {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    color: $color-dark;
+    margin-bottom: 5px;
+}
+
+.statLabel {
+    font-size: 0.9rem;
+    color: $color-text-muted;
+}
