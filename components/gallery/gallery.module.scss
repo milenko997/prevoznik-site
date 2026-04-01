@@ -1,0 +1,83 @@
+@use "@/styles/variables" as *;
+@use "@/styles/mixins" as *;
+
+.gallery {
+    padding: 100px 0;
+    background-color: $color-white;
+}
+
+.galleryGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 250px;
+    gap: 20px;
+}
+
+.galleryItem {
+    position: relative;
+    overflow: hidden;
+    border-radius: $border-radius;
+    cursor: pointer;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+    }
+
+    &:hover img {
+        transform: scale(1.1);
+    }
+
+    &:hover .galleryOverlay {
+        opacity: 1;
+    }
+}
+
+.galleryItemLarge {
+    grid-row: span 2;
+}
+
+.galleryOverlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.8),
+        transparent
+    );
+    opacity: 0;
+    transition: opacity 0.3s ease;
+
+    span {
+        color: $color-white;
+        font-size: clamp(1rem, 1vw + 0.8rem, 1.1rem);
+        font-weight: 600;
+    }
+}
+
+@media (max-width: 992px) {
+    .galleryGrid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 200px;
+    }
+
+    .galleryItemLarge {
+        grid-row: span 1;
+    }
+}
+
+@media (max-width: 576px) {
+    .galleryGrid {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 220px;
+    }
+
+    .gallery {
+        padding: 70px 0;
+    }
+}
