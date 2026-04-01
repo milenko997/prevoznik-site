@@ -6,9 +6,20 @@
 // 🎨 Colors
 $color-black: #000000;
 $color-white: #ffffff;
+$color-dark: #1a1a1a;
+$color-dark-light: #2d2d2d;
+$color-dark-medium: #3a3a3a;
+$color-light: #f8f9fa;
+$color-light-gray: #e9ecef;
+$color-accent: #f5a623;
+$color-accent-dark: #d4890c;
+$color-accent-light: #ffc857;
+$color-text-dark: #212529;
+$color-text-light: #f8f9fa;
+$color-text-muted: #6c757d;
 
 // 🔠 Typography
-
+$font-primary: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 $font-size-base: 16px;
 $font-size-sm: 14px;
 $font-size-lg: 18px;
@@ -22,17 +33,16 @@ $spacing-lg: 2rem;
 $spacing-xl: 4rem;
 
 // 🧱 Border and radius
-$border-radius-sm: 4px;
-$border-radius-md: 8px;
-$border-radius-lg: 16px;
+$border-radius: 8px;
 
 // 🌗 Shadow
-$shadow-light: 0 4px 12px rgba(0, 0, 0, 0.1);
-$shadow-heavy: 0 8px 24px rgba(0, 0, 0, 0.2);
+$shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+$shadow-md: 0 4px 12px rgba(0, 0, 0, 0.15);
+$shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.2);
 
 // 🕶️ Z-index
 $z-header: 1000;
 $z-modal: 2000;
 $z-tooltip: 3000;
 
-$transition: 0.3s ease-in-out;
+$transition: all 0.3s ease;
