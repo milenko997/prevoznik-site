@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Prevoznik - Prevoz i Iskopavanje | kamion i bager",
-  description: "Prevoznik - Pouzdane usluge prevoza građevinskog materijala i iskopavanja. Kamion 5t, bager 4t, odvoz šuta.",
+  title: "Bar-Kop - Prevoz i Iskopavanje | kamion i bager",
+  description: "Bar-Kop - Pouzdane usluge prevoza građevinskog materijala i iskopavanja. Kamion 5t, bager 4t, odvoz šuta.",
 };
 
 export default function RootLayout({

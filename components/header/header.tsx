@@ -50,7 +50,7 @@ const Header = () => {
         <nav className={`${styles.navbar} ${isScrolled ? styles.scrolled : ''}`}>
             <div className={styles.navContainer}>
                 <a href="#hero" className={styles.navLogo}>
-                    PREVOZNIK
+                    <img src="/logo.jpeg" alt="logo" />
                 </a>
 
                 <button

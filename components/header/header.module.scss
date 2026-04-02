@@ -30,8 +30,8 @@
     color: $color-white;
     letter-spacing: 2px;
 
-    &:hover {
-        color: $color-accent;
+    img {
+        max-width: 130px;
     }
 }
 

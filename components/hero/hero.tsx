@@ -7,7 +7,7 @@ const Hero = () => {
             <div className={styles.heroOverlay} />
 
             <div className={styles.heroContent}>
-                <h1 className={styles.heroTitle}>PREVOZNIK</h1>
+                <h1 className={styles.heroTitle}>BAR-KOP</h1>
 
                 <p className={styles.heroTagline}>
                     Pouzdane usluge prevoza i iskopavanja

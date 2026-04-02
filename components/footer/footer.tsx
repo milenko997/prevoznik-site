@@ -20,12 +20,9 @@ const Footer = () => {
     return (
         <footer className={styles.footer}>
             <div className="container">
-
                 <div className={styles.footerGrid}>
-
-                    {/* ABOUT */}
                     <div className={`${styles.footerCol} ${styles.footerAbout}`}>
-                        <div className={styles.footerLogo}>PREVOZNIK</div>
+                        <div className={styles.footerLogo}><img src="/logo.jpeg" alt="logo" /></div>
 
                         <p className={styles.footerDesc}>
                             Vaš pouzdan partner za prevoz građevinskog materijala i sve vrste iskopavanja.
@@ -92,7 +89,6 @@ const Footer = () => {
                             Pozovite nas
                         </a>
                     </div>
-
                 </div>
 
                 <div className={styles.footerBottom}>
@@ -101,7 +97,6 @@ const Footer = () => {
                         Pouzdano. Brzo. Kvalitetno.
                     </p>
                 </div>
-
             </div>
         </footer>
     );
