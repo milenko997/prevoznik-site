@@ -9,33 +9,33 @@ const Gallery = () => {
         {
             title: 'Utovar materijala',
             large: true,
-            img: 'https://images.unsplash.com/photo-1763349148643-9b21e1cefe50?crop=entropy&cs=srgb&fm=jpg&w=800&q=80',
+            img: '/bager.jpeg',
             alt: 'Bager utovaruje kamion'
         },
         {
             title: 'Iskopavanje',
-            img: 'https://images.unsplash.com/photo-1622082679766-c5912d9416eb?crop=entropy&cs=srgb&fm=jpg&w=600&q=80',
+            img: '/bager-kamion-front.jpeg',
             alt: 'Bager na gradilištu'
         },
         {
             title: 'Mini bager',
-            img: 'https://images.unsplash.com/photo-1759950345011-ee5a96640e00?crop=entropy&cs=srgb&fm=jpg&w=600&q=80',
+            img: '/bager-side.jpeg',
             alt: 'Mini bager'
         },
         {
             title: 'Transport',
-            img: 'https://images.unsplash.com/photo-1653924333410-0dda83ae490c?crop=entropy&cs=srgb&fm=jpg&w=600&q=80',
+            img: '/bager-kamion-side.jpeg',
             alt: 'Kamioni na gradilištu'
         },
         {
             title: 'Naša oprema',
             large: true,
-            img: 'https://images.unsplash.com/photo-1737535228679-71c84fa778d3?crop=entropy&cs=srgb&fm=jpg&w=800&q=80',
+            img: '/hero-bg.jpeg',
             alt: 'Bager i kamion'
         },
         {
             title: 'Gradilište',
-            img: 'https://images.unsplash.com/photo-1774867559682-e856ab83a7db?crop=entropy&cs=srgb&fm=jpg&w=600&q=80',
+            img: '/kamioni.jpeg',
             alt: 'Gradilište'
         }
     ];
