@@ -48,6 +48,10 @@ ul {
 .section-header {
     text-align: center;
     margin-bottom: 60px;
+
+    @include respond (md) {
+      margin-bottom: 40px;
+    }
 }
 
 .section-header-light .section-title {

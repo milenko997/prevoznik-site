@@ -11,6 +11,10 @@
     grid-template-columns: 1.5fr 1fr 1fr 1fr;
     gap: 50px;
     margin-bottom: 50px;
+
+    @include respond(md) {
+        grid-template-columns: 1fr;
+    }
 }
 
 .footerCol {
@@ -172,6 +176,12 @@
     justify-content: space-between;
     align-items: center;
 
+    @include respond(md) {
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+    }
+
     p {
         color: rgba(255, 255, 255, 0.4);
         font-size: 0.9rem;
@@ -179,6 +189,13 @@
 
     a {
         color: $color-accent;
+    }
+
+    span {
+        @include respond(md) {
+            display: block;
+            text-align: center;
+        }
     }
 }
 

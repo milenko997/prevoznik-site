@@ -10,6 +10,10 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 40px;
+
+    @include respond(md) {
+        gap: 20px;
+    }
 }
 
 .whyItem {

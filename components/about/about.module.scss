@@ -29,6 +29,11 @@
     grid-template-columns: 1fr 1fr;
     gap: 60px;
     align-items: center;
+
+    @include respond(md) {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
 }
 
 .aboutText {
@@ -49,6 +54,10 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
+
+    @include respond(md) {
+        grid-template-columns: 1fr;
+    }
 }
 
 .statItem {
