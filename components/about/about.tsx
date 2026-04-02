@@ -1,6 +1,14 @@
+'use client';
+
+import { useRef } from 'react';
+import useInViewAnimation from '@/hooks/useInViewAnimation';
 import styles from './about.module.scss';
 
 const About = () => {
+    const itemsRef = useRef<HTMLElement[]>([]);
+
+    useInViewAnimation(itemsRef);
+
     return (
         <section className={styles.about} id="about">
             <div className="container">
@@ -10,7 +18,11 @@ const About = () => {
                 </div>
 
                 <div className={styles.aboutContent}>
-                    <div className={styles.aboutText}>
+                    <div
+                        ref={(el) => {
+                            if (el) itemsRef.current[0] = el;
+                        }}
+                        className={styles.aboutText}>
                         <p className={styles.aboutLead}>
                             <strong>Prevoznik</strong> je lokalna firma koja pruža profesionalne usluge prevoza građevinskog materijala i iskopavanja već dugi niz godina.
                         </p>
@@ -25,7 +37,11 @@ const About = () => {
                     </div>
 
                     <div className={styles.aboutStats}>
-                        <div className={styles.statItem}>
+                        <div
+                            ref={(el) => {
+                                if (el) itemsRef.current[1] = el;
+                            }}
+                            className={styles.statItem}>
                             <span className={styles.statIcon}>
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                                     <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
@@ -35,7 +51,11 @@ const About = () => {
                             <span className={styles.statLabel}>Nosivost kamiona</span>
                         </div>
 
-                        <div className={styles.statItem}>
+                        <div
+                            ref={(el) => {
+                                if (el) itemsRef.current[2] = el;
+                            }}
+                            className={styles.statItem}>
                             <span className={styles.statIcon}>
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                                     <circle cx="12" cy="12" r="10"/>
@@ -46,7 +66,11 @@ const About = () => {
                             <span className={styles.statLabel}>Bager</span>
                         </div>
 
-                        <div className={styles.statItem}>
+                        <div
+                            ref={(el) => {
+                                if (el) itemsRef.current[3] = el;
+                            }}
+                            className={styles.statItem}>
                             <span className={styles.statIcon}>
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                                     <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>

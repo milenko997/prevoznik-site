@@ -1,3 +1,7 @@
+'use client';
+
+import { useRef } from 'react';
+import useInViewAnimation from '@/hooks/useInViewAnimation';
 import styles from './gallery.module.scss';
 
 const Gallery = () => {
@@ -36,6 +40,10 @@ const Gallery = () => {
         }
     ];
 
+    const itemsRef = useRef<HTMLElement[]>([]);
+
+    useInViewAnimation(itemsRef);
+
     return (
         <section className={styles.gallery} id="gallery">
             <div className="container">
@@ -49,9 +57,12 @@ const Gallery = () => {
                 </div>
 
                 <div className={styles.galleryGrid}>
-                    {galleryItems.map((item) => (
+                    {galleryItems.map((item, index) => (
                         <div
                             key={item.title}
+                            ref={(el) => {
+                                if (el) itemsRef.current[index] = el;
+                            }}
                             className={`${styles.galleryItem} ${item.large ? styles.galleryItemLarge : ''}`}
                         >
                             <img src={item.img} alt={item.alt} />

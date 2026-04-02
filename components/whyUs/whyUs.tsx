@@ -1,3 +1,7 @@
+'use client';
+
+import { useRef } from 'react';
+import useInViewAnimation from '@/hooks/useInViewAnimation';
 import styles from './whyUs.module.scss';
 
 const WhyUs = () => {
@@ -63,6 +67,10 @@ const WhyUs = () => {
         }
     ];
 
+    const itemsRef = useRef<HTMLElement[]>([]);
+
+    useInViewAnimation(itemsRef);
+
     return (
         <section className={styles.whyUs} id="why-us">
             <div className="container">
@@ -72,8 +80,12 @@ const WhyUs = () => {
                 </div>
 
                 <div className={styles.whyUsGrid}>
-                    {whyUsConst.map((item) => (
-                        <div key={item.title} className={styles.whyItem}>
+                    {whyUsConst.map((item, index) => (
+                        <div key={item.title} 
+                        ref={(el) => {
+                                if (el) itemsRef.current[index] = el;
+                            }}
+                        className={styles.whyItem}>
                             <div className={styles.whyIcon}>
                                 <svg
                                     viewBox="0 0 24 24"

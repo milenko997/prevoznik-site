@@ -1,3 +1,7 @@
+'use client';
+
+import { useRef } from 'react';
+import useInViewAnimation from '@/hooks/useInViewAnimation';
 import styles from './services.module.scss';
 
 const services = [
@@ -109,6 +113,10 @@ const services = [
 ];
 
 const Services = () => {
+    const itemsRef = useRef<HTMLElement[]>([]);
+
+    useInViewAnimation(itemsRef);
+
     return (
         <section className={styles.services} id="services">
             <div className="container">
@@ -121,9 +129,12 @@ const Services = () => {
                 </div>
 
                 <div className={styles.servicesGrid}>
-                    {services.map((service) => (
+                    {services.map((service, index) => (
                         <div
                             key={service.title}
+                            ref={(el) => {
+                                if (el) itemsRef.current[index] = el;
+                            }}
                             className={`${styles.serviceCard} ${service.special ? styles.serviceCardSpecial : ''}`}
                         >
                             <div

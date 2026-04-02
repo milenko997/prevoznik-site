@@ -1,10 +1,17 @@
+'use client';
+
+import { useRef } from 'react';
+import useInViewAnimation from '@/hooks/useInViewAnimation';
 import styles from './contact.module.scss';
 
 const Contact = () => {
+    const itemsRef = useRef<HTMLElement[]>([]);
+
+    useInViewAnimation(itemsRef);
+
     return (
         <section className={styles.contact} id="contact">
             <div className="container">
-
                 <div className="section-header section-header-light">
                     <h2 className="section-title">Kontaktirajte nas</h2>
                     <div className="section-line"></div>
@@ -14,9 +21,11 @@ const Contact = () => {
                 </div>
 
                 <div className={styles.contactContent}>
-
-                    <div className={styles.contactInfo}>
-
+                    <div 
+                        ref={(el) => {
+                            if (el) itemsRef.current[0] = el;
+                        }}
+                        className={styles.contactInfo}>
                         <div className={styles.contactItem}>
                             <div className={styles.contactIcon}>
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -59,10 +68,13 @@ const Contact = () => {
                                 <span className={styles.contactValue}>Pon - Sub: 06:00 - 16:00</span>
                             </div>
                         </div>
-
                     </div>
 
-                    <div className={styles.contactCta}>
+                    <div 
+                        ref={(el) => {
+                            if (el) itemsRef.current[1] = el;
+                        }}
+                        className={styles.contactCta}>
                         <p className={styles.ctaText}>
                             Potrebna vam je naša usluga?
                         </p>
@@ -75,7 +87,6 @@ const Contact = () => {
                             Pozovite odmah
                         </a>
                     </div>
-
                 </div>
             </div>
         </section>
