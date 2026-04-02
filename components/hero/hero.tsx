@@ -17,7 +17,7 @@ const Hero = () => {
                     Kamion 5t | Bager 4t | Odvoz šuta
                 </p>
 
-                <Link href="#contact" className={styles.heroBtn}>
+                <Link href="tel:+381665175385" className={styles.heroBtn}>
                     Pozovite nas
                 </Link>
             </div>
