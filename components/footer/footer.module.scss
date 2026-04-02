@@ -1,2 +1,188 @@
 @use "@/styles/variables" as *;
 @use "@/styles/mixins" as *;
+
+.footer {
+    background-color: #111;
+    padding: 80px 0 30px;
+}
+
+.footerGrid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 50px;
+    margin-bottom: 50px;
+}
+
+.footerCol {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.footerLogo {
+    font-size: clamp(1.5rem, 1vw + 1rem, 1.8rem);
+    font-weight: 700;
+    color: $color-white;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.footerDesc {
+    font-size: clamp(0.9rem, 0.8vw + 0.7rem, 0.95rem);
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.footerEquipment {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.equipmentBadge {
+    padding: 8px 16px;
+    background-color: $color-accent;
+    color: $color-dark;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border-radius: 20px;
+}
+
+.footerTitle {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: $color-white;
+    margin-bottom: 25px;
+    position: relative;
+    padding-bottom: 10px;
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 30px;
+        height: 2px;
+        background-color: $color-accent;
+    }
+}
+
+.footerLinks {
+    list-style: none;
+
+    li {
+        padding: 8px 0;
+        font-size: 0.9rem;
+        position: relative;
+        padding-left: 15px;
+        transition: $transition;
+
+        &::before {
+            content: '›';
+            position: absolute;
+            left: 0;
+            color: $color-accent;
+        }
+
+        &:hover {
+            color: $color-accent;
+            padding-left: 20px;
+        }
+    }
+}
+
+.footerSchedule {
+    list-style: none;
+
+    li {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        font-size: 0.9rem;
+
+        &:last-child {
+            border-bottom: none;
+        }
+
+        span:last-child {
+            color: $color-accent;
+            font-weight: 500;
+        }
+    }
+}
+
+.footerNote {
+    margin-top: 15px;
+    font-size: 0.8rem;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.footerContact {
+    margin-bottom: 20px;
+}
+
+.footerContactItem {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 0;
+
+    svg {
+        width: 20px;
+        height: 20px;
+        color: $color-accent;
+    }
+
+    a {
+        color: $color-white;
+        font-weight: 500;
+
+        &:hover {
+            color: $color-accent;
+        }
+    }
+}
+
+.footerCtaBtn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 25px;
+    background-color: $color-accent;
+    color: $color-dark;
+    font-weight: 600;
+    border-radius: 30px;
+    transition: $transition;
+
+    svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    &:hover {
+        background-color: $color-accent-light;
+        transform: translateY(-2px);
+    }
+}
+
+.footerBottom {
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    p {
+        color: rgba(255, 255, 255, 0.4);
+        font-size: 0.9rem;
+    }
+
+    a {
+        color: $color-accent;
+    }
+}
+
+p.footerTagline {
+    color: $color-accent;
+    font-weight: 500;
+}
