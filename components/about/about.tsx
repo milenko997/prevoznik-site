@@ -4,9 +4,9 @@ const About = () => {
     return (
         <section className={styles.about} id="about">
             <div className="container">
-                <div className={styles.sectionHeader}>
-                    <h2 className={styles.sectionTitle}>O nama</h2>
-                    <div className={styles.sectionLine} />
+                <div className="section-header">
+                    <h2 className="section-title">O nama</h2>
+                    <div className="section-line" />
                 </div>
 
                 <div className={styles.aboutContent}>

@@ -6,24 +6,6 @@
     background-color: $color-white;
 }
 
-.sectionHeader {
-    text-align: center;
-    margin-bottom: 60px;
-}
-
-.sectionTitle {
-    font-size: clamp(2rem, 5vw, 2.8rem);
-    font-weight: 700;
-    color: $color-dark;
-}
-
-.sectionLine {
-    width: 60px;
-    height: 3px;
-    background-color: $color-accent;
-    margin: 15px auto 0;
-}
-
 .aboutContent {
     display: grid;
     grid-template-columns: 1fr 1fr;

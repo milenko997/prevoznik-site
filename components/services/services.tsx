@@ -112,10 +112,10 @@ const Services = () => {
     return (
         <section className={styles.services} id="services">
             <div className="container">
-                <div className={`${styles.sectionHeader} ${styles.sectionHeaderLight}`}>
-                    <h2 className={styles.sectionTitle}>Naše usluge</h2>
-                    <div className={styles.sectionLine} />
-                    <p className={styles.sectionSubtitle}>
+                <div className="section-header section-header-light">
+                    <h2 className="section-title">Naše usluge</h2>
+                    <div className="section-line" />
+                    <p className="section-subtitle">
                         Kompletna ponuda za vaše građevinske potrebe
                     </p>
                 </div>
