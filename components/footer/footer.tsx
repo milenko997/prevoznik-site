@@ -92,7 +92,7 @@ const Footer = () => {
                 </div>
 
                 <div className={styles.footerBottom}>
-                    <p>© 2026 Prevoznik. Sva prava zadržana. <span>Website napravio <a href="https://milenkoilic.dev/" target='_blank'>Milenko Ilić</a></span></p>
+                    <p>© 2026 Bar-Kop. Sva prava zadržana. <span>Website napravio <a href="https://milenkoilic.dev/" target='_blank'>Milenko Ilić</a></span></p>
                     <p className={styles.footerTagline}>
                         Pouzdano. Brzo. Kvalitetno.
                     </p>
