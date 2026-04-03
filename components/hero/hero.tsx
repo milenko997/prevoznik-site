@@ -14,7 +14,23 @@ const Hero = () => {
                 </h1>
 
                 <h3 className={styles.heroSubtitle}>
-                    Kamion 5t | Bager 4t | Odvoz šuta
+                    Kamion 5m<sup>3</sup> | Bager 4t
+                </h3>
+
+                <h3 className={styles.heroSubtitle}>
+                    Odvoz šuta | Prevoz građevinskog materijala
+                </h3>
+
+                <h3 className={styles.heroSubtitle}>
+                    Sve vrste iskopa: kanal | bazen | temelj | septička jama
+                </h3>
+
+                <h3 className={styles.heroSubtitle}>
+                    Nivelacija terena | ravnanje
+                </h3>
+
+                <h3 className={styles.heroSubtitle}>
+                    Razbijanje svih vrsta betona pikamerom(čekić)
                 </h3>
 
                 <Link href="tel:+381665175385" className={styles.heroBtn}>

@@ -47,7 +47,7 @@ const About = () => {
                                     <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
                                 </svg>
                             </span>
-                            <span className={styles.statNumber}>5t</span>
+                            <span className={styles.statNumber}>5m<sup>3</sup></span>
                             <span className={styles.statLabel}>Nosivost kamiona</span>
                         </div>
 

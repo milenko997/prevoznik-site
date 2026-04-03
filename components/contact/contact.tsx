@@ -51,7 +51,7 @@ const Contact = () => {
 
                             <div className={styles.contactDetails}>
                                 <span className={styles.contactLabel}>Lokacija</span>
-                                <span className={styles.contactValue}>Novi Sad</span>
+                                <span className={styles.contactValue}>Novi Sad i okolina</span>
                             </div>
                         </div>
 
