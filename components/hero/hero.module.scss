@@ -55,6 +55,11 @@
     color: $color-white;
     margin-bottom: 20px;
     letter-spacing: 2px;
+
+    @include respond(md) {
+        margin-bottom: 10px;
+        font-size: 1rem;
+    }
 }
 
 .heroBtn {
