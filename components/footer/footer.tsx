@@ -30,7 +30,7 @@ const Footer = () => {
                         </p>
 
                         <div className={styles.footerEquipment}>
-                            <span className={styles.equipmentBadge}>Kamion 5t</span>
+                            <span className={styles.equipmentBadge}>Kamion 5m<sup>3</sup></span>
                             <span className={styles.equipmentBadge}>Bager 4t</span>
                         </div>
                     </div>
