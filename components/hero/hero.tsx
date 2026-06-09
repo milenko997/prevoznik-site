@@ -22,7 +22,7 @@ const Hero = () => {
                 </h3>
 
                 <h3 className={styles.heroSubtitle}>
-                    Sve vrste iskopa: kanal | bazen | temelj | septička jama
+                    Sve vrste iskopavanja: kanal | bazen | temelj | septička jama
                 </h3>
 
                 <h3 className={styles.heroSubtitle}>
