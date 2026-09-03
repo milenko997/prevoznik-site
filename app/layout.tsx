@@ -37,6 +37,8 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://barkop.rs/'),
   alternates: {
     canonical: 'https://barkop.rs/',
+  verification: {
+    google: "f7idEEtnALW_QH5zPNXFRYiOnsffcyeEV2Vi7snPMKY",
   },
 };
 
