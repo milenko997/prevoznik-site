@@ -56,6 +56,7 @@ const Header = () => {
         <button
           className={`${styles.navToggle} ${isOpen ? styles.active : ''}`}
           onClick={() => setIsOpen(!isOpen)}
+          aria-label='Meni'
         >
           <span></span>
           <span></span>

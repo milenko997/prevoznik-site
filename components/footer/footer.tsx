@@ -23,7 +23,7 @@ const Footer = () => {
         <div className={styles.footerGrid}>
           <div className={`${styles.footerCol} ${styles.footerAbout}`}>
             <div className={styles.footerLogo}>
-              <img src='/logo.webp' alt='Bar Kop logo' />
+              <img src='/logo.webp' alt='Bar Kop logo' loading='lazy' />
             </div>
 
             <p className={styles.footerDesc}>
@@ -40,7 +40,7 @@ const Footer = () => {
           </div>
 
           <div className={styles.footerCol}>
-            <h4 className={styles.footerTitle}>Usluge</h4>
+            <h3 className={styles.footerTitle}>Usluge</h3>
 
             <ul className={styles.footerLinks}>
               {services.map((service) => (
@@ -50,7 +50,7 @@ const Footer = () => {
           </div>
 
           <div className={styles.footerCol}>
-            <h4 className={styles.footerTitle}>Radno vreme</h4>
+            <h3 className={styles.footerTitle}>Radno vreme</h3>
 
             <ul className={styles.footerSchedule}>
               {schedule.map((item) => (
@@ -61,11 +61,11 @@ const Footer = () => {
               ))}
             </ul>
 
-            <p className={styles.footerNote}>*Za hitne slučajeve pozovite nas</p>
+            <p className={styles.footerNote}>* Dostupni za hitne slučajeve</p>
           </div>
 
           <div className={styles.footerCol}>
-            <h4 className={styles.footerTitle}>Kontakt</h4>
+            <h3 className={styles.footerTitle}>Kontakt</h3>
 
             <div className={styles.footerContact}>
               <div className={styles.footerContactItem}>

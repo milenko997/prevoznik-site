@@ -7,9 +7,9 @@ const Hero = () => {
       <div className={styles.heroOverlay} />
 
       <div className={styles.heroContent}>
-        <h2 className={styles.heroTitle}>BAR-KOP</h2>
+        <h1 className={styles.heroTitle}>BAR-KOP</h1>
 
-        <h1 className={styles.heroTagline}>Pouzdane usluge prevoza i iskopa</h1>
+        <h2 className={styles.heroTagline}>Pouzdane usluge prevoza i iskopa</h2>
 
         <h3 className={styles.heroSubtitle}>
           Kamion 5m<sup>3</sup> | Bager 4t

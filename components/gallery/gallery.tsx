@@ -62,7 +62,7 @@ const Gallery = () => {
               }}
               className={`${styles.galleryItem} ${item.large ? styles.galleryItemLarge : ''}`}
             >
-              <img src={item.img} alt={item.alt} />
+              <img src={item.img} alt={item.alt} loading='lazy' />
 
               <div className={styles.galleryOverlay}>
                 <span>{item.title}</span>
