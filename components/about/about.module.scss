@@ -1,81 +1,81 @@
-@use "@/styles/variables" as *;
-@use "@/styles/mixins" as *;
+@use '@/styles/variables' as *;
+@use '@/styles/mixins' as *;
 
 .about {
-    padding: 100px 0;
-    background-color: $color-white;
+  padding: 100px 0;
+  background-color: $color-white;
 }
 
 .aboutContent {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
 
-    @include respond(md) {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
+  @include respond(md) {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
 }
 
 .aboutText {
-    p {
-        margin-bottom: 20px;
-        color: $color-text-muted;
-        font-size: 1.05rem;
-    }
+  p {
+    margin-bottom: 20px;
+    color: $color-text-muted;
+    font-size: 1.05rem;
+  }
 }
 
 .aboutText .aboutLead {
-    font-size: 1.2rem;
-    color: $color-text-dark;
-    font-weight: 500;
+  font-size: 1.2rem;
+  color: $color-text-dark;
+  font-weight: 500;
 }
 
 .aboutStats {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
 
-    @include respond(md) {
-        grid-template-columns: 1fr;
-    }
+  @include respond(md) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .statItem {
-    text-align: center;
-    padding: 30px 20px;
-    background-color: $color-light;
-    border-radius: $border-radius;
-    transition: $transition;
+  text-align: center;
+  padding: 30px 20px;
+  background-color: $color-light;
+  border-radius: $border-radius;
+  transition: $transition;
 
-    &:hover {
-        transform: translateY(-5px);
-        box-shadow: $shadow-md;
-    }
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: $shadow-md;
+  }
 }
 
 .statIcon {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
 
-    svg {
-        width: 40px;
-        height: 40px;
-        color: $color-accent;
-    }
+  svg {
+    width: 40px;
+    height: 40px;
+    color: $color-accent;
+  }
 }
 
 .statNumber {
-    display: block;
-    font-size: 2rem;
-    font-weight: 700;
-    color: $color-dark;
-    margin-bottom: 5px;
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  color: $color-dark;
+  margin-bottom: 5px;
 }
 
 .statLabel {
-    font-size: 0.9rem;
-    color: $color-text-muted;
+  font-size: 0.9rem;
+  color: $color-text-muted;
 }
